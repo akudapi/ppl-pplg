@@ -1,0 +1,171 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+#container {
+  display: grid;
+  grid-template-areas:
+    "banner banner"
+    "navbar navbar"
+    "mtext mtext"
+    "konten konten"
+    "footer footer";
+}
+
+header {
+  grid-area: banner;
+  width: 100%;
+  height: 160px;
+}
+
+header img {
+  width: 100%;
+  height: 160px;
+}
+
+.navbar {
+  grid-area: navbar;
+  width: 100%;
+  height: 40px;
+  background-color: lightblue;
+}
+
+.navbar ul {
+  display: flex;
+  list-style: none;
+}
+
+.navbar a {
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: black;
+  font-size: 12px;
+  font-weight: bold;
+  border: 1px solid black;
+}
+
+.mtext {
+  grid-area: mtext;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  background-color: cornflowerblue;
+  height: 30px;
+  padding: 0 10px;
+}
+
+.mtext p {
+  font-size: 13px;
+  color: white;
+  animation: moveText 15s linear infinite;
+  white-space: nowrap;
+}
+
+@keyframes moveText {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(720%);
+  }
+}
+
+.konten {
+  grid-area: konten;
+  display: grid;
+  grid-template-areas: "konten sidebar";
+  grid-template-columns: 75% 25%;
+}
+
+.main {
+  padding: 60px;
+}
+
+.main h1 {
+    margin: 0 0 40px 0;
+    text-align: center;
+    font-weight: 600;
+}
+
+.data {
+    display: grid;
+    grid-template-areas: "label data";
+    grid-template-columns: 1fr 4fr;
+}
+
+.label {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: 16px;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.input input {
+    border: none;
+    font-size: 16px;
+}
+
+.sidebar {
+  grid-area: sidebar;
+  padding: 10px;
+  height: 300px;
+  border: 2px dotted black;
+  background-color: lightblue;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sb-img {
+  width: 100%;
+  height: 150px;
+  background-color: white;
+}
+
+.sb-img img {
+  width: 99%;
+  height: 150px;
+}
+
+.p {
+  background-color: white;
+  border: 1px solid lightgray;
+}
+
+.p p {
+  padding: 5px 10px;
+}
+
+.main-p {
+  background-color: cornflowerblue;
+  color: white;
+  font-weight: 500;
+  text-align: center;
+}
+
+.sub-p {
+  font-weight: normal;
+}
+
+footer {
+  grid-area: footer;
+  background-color: grey;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer p {
+  color: white;
+}
